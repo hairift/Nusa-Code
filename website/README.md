@@ -16,3 +16,15 @@ npm run build
 ```
 
 Hasil build tersedia di direktori `dist/`.
+
+## Deployment
+
+Workflow `.github/workflows/deploy.yml` membangun dan menerbitkan situs ke
+GitHub Pages setiap push ke `main`. Aktifkan **Settings → Pages → Source: GitHub
+Actions** pada repository `hairift/Web-App-NusaCode` satu kali.
+
+Situs tidak memakai tracker, font eksternal, atau layanan gambar pihak ketiga.
+
+## Lisensi
+
+MIT. Lihat `LICENSE`.

@@ -163,7 +163,7 @@ export default function App() {
       <a className="skip-link" href="#main">Langsung ke konten</a>
       <header className="site-header">
         <a className="brand" href="#beranda" aria-label="NusaCode, kembali ke beranda">
-          <img src="/assets/nusacode-logo.png" alt="" />
+          <img src="./assets/nusacode-logo.png" alt="" />
           <span><strong>NUSA</strong><small>CODE / ID</small></span>
         </a>
 
@@ -217,7 +217,7 @@ export default function App() {
 
           <figure className="hero-visual reveal delay-1">
             <div className="image-index" aria-hidden="true"><span>01</span><span>NUSANTARA / COMPUTING</span></div>
-            <img src="/assets/nusacode-banner.jpg" alt="Ilustrasi biawak hijau, maskot NusaCode, dengan simbol kurung kurawal" />
+            <img src="./assets/nusacode-banner.jpg" alt="Ilustrasi biawak hijau, maskot NusaCode, dengan simbol kurung kurawal" />
             <figcaption>
               <span>IDENTITAS VISUAL</span>
               <span>BAHASA · RUNTIME · KOMUNITAS</span>
@@ -400,7 +400,7 @@ export default function App() {
 
       <footer>
         <div className="footer-brand">
-          <img src="/assets/nusacode-logo.png" alt="" />
+          <img src="./assets/nusacode-logo.png" alt="" />
           <div><strong>NusaCode</strong><span>Bahasa dari Indonesia, untuk siapa saja.</span></div>
         </div>
         <div className="footer-links">
