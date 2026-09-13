@@ -2,6 +2,15 @@
 
 Situs dokumentasi dan unduhan NusaCode, dibuat dengan React, TypeScript, dan Vite.
 
+## Pratinjau
+
+<p align="center">
+  <img src="docs/images/beranda.png" alt="Tampilan halaman beranda website NusaCode" width="1200">
+</p>
+
+Tampilan mengadaptasi warna teal, hijau laut, ivory, dan amber dari identitas
+visual NusaCode, dengan layout responsif untuk desktop dan perangkat mobile.
+
 ## Menjalankan secara lokal
 
 ```bash
