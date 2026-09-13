@@ -1,0 +1,24 @@
+{
+  "iconDefinitions": {
+    "_nusa": {
+      "iconPath": "../assets/logo.png"
+    }
+  },
+  "fileExtensions": {
+    "nusa": "_nusa"
+  },
+  "fileNames": {
+    "nusa.config": "_nusa"
+  },
+  "light": {
+    "fileExtensions": {
+      "nusa": "_nusa"
+    }
+  },
+  "highContrast": {
+    "fileExtensions": {
+      "nusa": "_nusa"
+    }
+  },
+  "showLanguageModeIcons": true
+}

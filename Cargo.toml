@@ -1,0 +1,16 @@
+[package]
+name = "nusacode"
+version = "0.1.0"
+edition = "2021"
+description = "Portable reference interpreter for the Nusa language"
+license = "MIT"
+
+[lib]
+name = "nusacode"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nusa"
+path = "src/main.rs"
+
+[dependencies]

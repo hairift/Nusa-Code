@@ -1,0 +1,43 @@
+{
+  "comments": {
+    "lineComment": "#"
+  },
+  "brackets": [
+    ["(", ")"],
+    ["[", "]"],
+    ["{", "}"]
+  ],
+  "autoClosingPairs": [
+    { "open": "(", "close": ")" },
+    { "open": "[", "close": "]" },
+    { "open": "{", "close": "}" },
+    { "open": "\"", "close": "\"", "notIn": ["string", "comment"] }
+  ],
+  "surroundingPairs": [
+    ["(", ")"],
+    ["[", "]"],
+    ["{", "}"],
+    ["\"", "\""]
+  ],
+  "wordPattern": "[A-Za-z_][A-Za-z0-9_]*",
+  "folding": {
+    "markers": {
+      "start": "^\\s*(?:jika|selama|untuk|fungsi)\\b.*\\bmaka\\s*(?:#.*)?$",
+      "end": "^\\s*akhir_(?:jika|selama|untuk|fungsi)\\b"
+    }
+  },
+  "indentationRules": {
+    "increaseIndentPattern": "\\bmaka\\s*(?:#.*)?$",
+    "decreaseIndentPattern": "^\\s*(?:akhir_(?:jika|selama|untuk|fungsi)|atau_jika\\b.*\\bmaka|selain)\\b"
+  },
+  "onEnterRules": [
+    {
+      "beforeText": "\\bmaka\\s*(?:#.*)?$",
+      "action": { "indent": "indent" }
+    },
+    {
+      "beforeText": "^\\s*akhir_(?:jika|selama|untuk|fungsi)\\b",
+      "action": { "indent": "outdent" }
+    }
+  ]
+}

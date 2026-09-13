@@ -1,0 +1,17 @@
+# Percabangan dan perulangan dengan blok eksplisit.
+# Program ini ditujukan menjadi uji end-to-end setelah parser tersedia.
+
+var batas <- 5
+var jumlah <- 0
+
+untuk angka dari 1 sampai batas maka
+    jika angka % 2 = 0 maka
+        tulis(ubah_teks(angka) + " adalah genap")
+    selain
+        tulis(ubah_teks(angka) + " adalah ganjil")
+    akhir_jika
+
+    jumlah <- jumlah + angka
+akhir_untuk
+
+tulis("Jumlah: " + ubah_teks(jumlah))

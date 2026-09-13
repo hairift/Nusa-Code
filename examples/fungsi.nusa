@@ -1,0 +1,13 @@
+# Fungsi dan rekursi dalam Nusa.
+
+fungsi faktorial(n) maka
+    jika n <= 1 maka
+        kembalikan 1
+    akhir_jika
+
+    kembalikan n * faktorial(n - 1)
+akhir_fungsi
+
+untuk nilai dari 0 sampai 6 maka
+    tulis(ubah_teks(nilai) + "! = " + ubah_teks(faktorial(nilai)))
+akhir_untuk

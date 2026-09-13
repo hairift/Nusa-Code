@@ -1,0 +1,36 @@
+name: Perbaikan dokumentasi
+description: Laporkan dokumentasi yang salah, tidak lengkap, atau membingungkan
+title: "[Dokumentasi]: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Lokasi dokumentasi
+      description: Berikan jalur berkas dan bagian atau tautan yang tepat.
+      placeholder: docs/BAHASA.md, bagian Operator
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Masalah
+      description: Jelaskan informasi yang salah, hilang, atau sulit dipahami.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Perbaikan yang disarankan
+      description: Usulkan redaksi atau struktur baru bila memungkinkan.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: status
+    attributes:
+      label: Kejujuran status
+      options:
+        - label: Saya telah membandingkan klaim dengan `docs/STATUS_IMPLEMENTASI.md`.
+          required: true

@@ -1,0 +1,6 @@
+# Program pertama dalam bahasa Nusa.
+# Catatan: contoh ini adalah sintaksis target; belum semua fitur aktif
+# hingga milestone terkait selesai (lihat docs/BAHASA.md).
+
+var nama = "dunia"
+tulis("Halo, " + nama + "!")

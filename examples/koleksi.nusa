@@ -1,0 +1,11 @@
+# Daftar, kamus, dan pengindeksan dalam Nusa.
+
+var angka <- [2, 4, 6, 8]
+var profil <- {"nama": "Ayu", "aktif": benar}
+
+tulis("Nama: " + profil["nama"])
+tulis("Angka pertama: " + ubah_teks(angka[0]))
+tulis("Banyak angka: " + ubah_teks(panjang(angka)))
+
+angka <- dorong(angka, 10)
+tulis("Banyak angka sekarang: " + ubah_teks(panjang(angka)))

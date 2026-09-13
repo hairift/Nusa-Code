@@ -1,0 +1,146 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Nusa",
+  "scopeName": "source.nusa",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#function-declarations" },
+    { "include": "#keywords" },
+    { "include": "#constants" },
+    { "include": "#builtins" },
+    { "include": "#operators" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.nusa",
+          "begin": "#",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.comment.nusa" }
+          },
+          "end": "$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.nusa",
+          "begin": "\"",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.nusa" }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.nusa" }
+          },
+          "patterns": [
+            {
+              "name": "constant.character.escape.nusa",
+              "match": "\\\\(?:[nt\"\\\\]|.)"
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.nusa",
+          "match": "(?<![A-Za-z0-9_])\\d+\\.\\d+(?![A-Za-z0-9_])"
+        },
+        {
+          "name": "constant.numeric.integer.nusa",
+          "match": "(?<![A-Za-z0-9_])\\d+(?![A-Za-z0-9_])"
+        }
+      ]
+    },
+    "function-declarations": {
+      "patterns": [
+        {
+          "match": "\\b(fungsi|function)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "storage.type.function.nusa" },
+            "2": { "name": "entity.name.function.nusa" }
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.conditional.nusa",
+          "match": "\\b(?:jika|if|maka|do|atau_jika|else_if|selain|else|akhir_jika|end_if)\\b"
+        },
+        {
+          "name": "keyword.control.loop.nusa",
+          "match": "\\b(?:selama|while|akhir_selama|end_while|untuk|for|dari|from|sampai|to|langkah|step|akhir_untuk|end_for)\\b"
+        },
+        {
+          "name": "keyword.control.function.nusa",
+          "match": "\\b(?:fungsi|function|akhir_fungsi|end_function|kembalikan|return)\\b"
+        },
+        {
+          "name": "storage.type.variable.nusa",
+          "match": "\\b(?:ubah|var|let)\\b"
+        },
+        {
+          "name": "keyword.operator.logical.nusa",
+          "match": "\\b(?:dan|and|atau|or|tidak|not)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.nusa",
+          "match": "\\b(?:benar|true|salah|false)\\b"
+        },
+        {
+          "name": "constant.language.null.nusa",
+          "match": "\\b(?:kosong|null)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.nusa",
+          "match": "\\b(?:tulis|print|tulis_tanpa_baris|print_inline|baca|input|ubah_teks|string|to_string|ubah_bilangan|integer|to_integer|ubah_desimal|float|to_float|panjang|length|tipe|type|dorong|push|mutlak|absolute|abs)(?=\\s*\\()"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.nusa",
+          "match": "<-"
+        },
+        {
+          "name": "keyword.operator.comparison.nusa",
+          "match": "(?:==|!=|<=|>=|=|<|>)"
+        },
+        {
+          "name": "keyword.operator.arithmetic.nusa",
+          "match": "(?:\\*\\*|//|[+\\-*/%])"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.comma.nusa",
+          "match": ","
+        },
+        {
+          "name": "punctuation.section.group.nusa",
+          "match": "[()\\[\\]{}]"
+        }
+      ]
+    }
+  }
+}

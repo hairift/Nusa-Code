@@ -1,0 +1,74 @@
+name: Usulan fitur
+description: Usulkan kemampuan atau perubahan desain NusaCode
+title: "[Usulan]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Jelaskan masalah pengguna sebelum solusi. Perubahan grammar, bytecode, platform, atau dependensi memerlukan pembahasan desain dan bukti pengujian.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pemeriksaan awal
+      options:
+        - label: Saya telah mencari usulan serupa.
+          required: true
+        - label: Saya telah membaca ROADMAP dan status implementasi.
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Bahasa dan grammar
+        - Interpreter dan VM
+        - Pustaka baku
+        - Diagnostik
+        - Tooling editor
+        - Portabilitas
+        - Dokumentasi
+        - Proses proyek
+        - Lainnya
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Masalah yang ingin diselesaikan
+      description: Siapa yang terdampak dan mengapa solusi yang ada belum cukup?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solusi yang diusulkan
+      description: Sertakan contoh sintaks atau antarmuka bila relevan.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatif yang dipertimbangkan
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Dampak kompatibilitas dan risiko
+      description: Bahas migrasi, keamanan, performa, platform, dan dependensi.
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Strategi validasi
+      description: Pengujian atau kriteria penerimaan yang membuktikan fitur selesai.
+    validations:
+      required: true

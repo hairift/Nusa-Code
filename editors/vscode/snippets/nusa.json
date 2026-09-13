@@ -1,0 +1,64 @@
+{
+  "Program halo": {
+    "prefix": "halo",
+    "body": [
+      "tulis(\"${1:Halo, Nusa!}\")"
+    ],
+    "description": "Tulis satu baris ke konsol"
+  },
+  "Deklarasi variabel": {
+    "prefix": "var",
+    "body": [
+      "var ${1:nama} <- ${2:nilai}"
+    ],
+    "description": "Deklarasikan variabel Nusa"
+  },
+  "Percabangan jika": {
+    "prefix": "jika",
+    "body": [
+      "jika ${1:kondisi} maka",
+      "    ${2:# isi blok}",
+      "akhir_jika"
+    ],
+    "description": "Blok jika dengan penutup eksplisit"
+  },
+  "Percabangan lengkap": {
+    "prefix": "jika-lengkap",
+    "body": [
+      "jika ${1:kondisi} maka",
+      "    ${2:# cabang benar}",
+      "selain",
+      "    ${3:# cabang lain}",
+      "akhir_jika"
+    ],
+    "description": "Blok jika dan selain"
+  },
+  "Perulangan selama": {
+    "prefix": "selama",
+    "body": [
+      "selama ${1:kondisi} maka",
+      "    ${2:# isi perulangan}",
+      "akhir_selama"
+    ],
+    "description": "Perulangan selama"
+  },
+  "Perulangan untuk": {
+    "prefix": "untuk",
+    "body": [
+      "untuk ${1:i} dari ${2:1} sampai ${3:10} maka",
+      "    ${4:# isi perulangan}",
+      "akhir_untuk"
+    ],
+    "description": "Perulangan rentang inklusif"
+  },
+  "Fungsi": {
+    "prefix": "fungsi",
+    "body": [
+      "fungsi ${1:nama}(${2:parameter}) maka",
+      "    ${3:# isi fungsi}",
+      "    kembalikan ${4:kosong}",
+      "akhir_fungsi"
+    ],
+    "description": "Deklarasi fungsi Nusa"
+  }
+}

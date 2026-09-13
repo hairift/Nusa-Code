@@ -1,0 +1,89 @@
+name: Laporan bug
+description: Laporkan perilaku NusaCode yang dapat direproduksi
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih telah membantu memperbaiki NusaCode. Periksa isu yang sudah ada dan jangan gunakan formulir ini untuk kerentanan keamanan. Ikuti `SECURITY.md` untuk laporan privat.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pemeriksaan awal
+      options:
+        - label: Saya telah mencari isu serupa yang masih terbuka maupun sudah ditutup.
+          required: true
+        - label: Ini bukan laporan kerentanan keamanan.
+          required: true
+        - label: Saya telah membaca status implementasi dan fitur ini dinyatakan aktif atau tersedia.
+          required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Komponen
+      options:
+        - Build dan toolchain
+        - Mesin virtual bytecode
+        - Lexer
+        - Sintaks atau semantik bahasa
+        - Fungsi baku dan I/O
+        - Dokumentasi
+        - Ekstensi VS Code
+        - CI atau rilis
+        - Lainnya
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versi atau commit
+      description: Gunakan tag versi atau hash commit lengkap jika tersedia.
+      placeholder: v0.1.0 atau 0123456789abcdef
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Lingkungan
+      description: Sistem operasi, arsitektur, shell, dan versi toolchain yang relevan.
+      placeholder: Windows 11 x64, MinGW i686, GNU as 2.43
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Langkah reproduksi
+      description: Berikan contoh minimal dan perintah persis yang dijalankan.
+      placeholder: |
+        1. Build dengan ...
+        2. Jalankan ...
+        3. Amati ...
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Perilaku yang diharapkan
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Perilaku aktual
+      description: Sertakan pesan galat dan kode keluar. Hapus data sensitif.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Konteks tambahan
+      description: Tautan, tangkapan layar, atau dugaan penyebab jika relevan.

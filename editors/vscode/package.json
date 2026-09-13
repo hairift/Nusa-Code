@@ -1,0 +1,121 @@
+{
+  "name": "nusacode-language-support",
+  "displayName": "NusaCode Language Support",
+  "description": "Dukungan deklaratif untuk bahasa Nusa: sintaks, konfigurasi bahasa, snippet, dan ikon berkas.",
+  "version": "0.1.0",
+  "publisher": "nusacode",
+  "license": "MIT",
+  "preview": true,
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:nusa",
+    "onCommand:nusacode.runFile",
+    "onCommand:nusacode.checkFile"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "nusa",
+    "nusacode",
+    "bahasa indonesia",
+    "language support",
+    "syntax highlighting"
+  ],
+  "icon": "assets/logo.png",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "nusacode.runFile",
+        "title": "NusaCode: Jalankan Berkas Aktif",
+        "icon": "$(play)"
+      },
+      {
+        "command": "nusacode.checkFile",
+        "title": "NusaCode: Periksa Berkas Aktif",
+        "icon": "$(check)"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "command": "nusacode.runFile",
+          "when": "resourceLangId == nusa",
+          "group": "navigation@1"
+        },
+        {
+          "command": "nusacode.checkFile",
+          "when": "resourceLangId == nusa",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "NusaCode",
+      "properties": {
+        "nusacode.runtimePath": {
+          "type": "string",
+          "default": "nusa",
+          "description": "Jalur binary interpreter NusaCode yang digunakan oleh perintah Run dan Check."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "nusa",
+        "aliases": [
+          "Nusa",
+          "nusa"
+        ],
+        "extensions": [
+          ".nusa"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./assets/logo.png",
+          "dark": "./assets/logo.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nusa",
+        "scopeName": "source.nusa",
+        "path": "./syntaxes/nusa.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "nusa",
+        "path": "./snippets/nusa.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "nusacode-file-icons",
+        "label": "NusaCode File Icons",
+        "path": "./themes/nusacode-file-icon-theme.json"
+      }
+    ]
+  },
+  "files": [
+    "assets",
+    "snippets",
+    "syntaxes",
+    "themes",
+    "language-configuration.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "extension.js"
+  ]
+}

@@ -1,0 +1,42 @@
+# Artefak build Nusa
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.a
+*.pdb
+*.ilk
+
+# Rust
+/target/
+**/*.rs.bk
+
+# Paket ekstensi VS Code
+editors/vscode/node_modules/
+editors/vscode/*.vsix
+
+# Website
+website/node_modules/
+website/dist/
+
+# Artefak sesi desain lokal
+.design-session-*/
+
+# Editor dan IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistem operasi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Berkas sementara dan laporan
+*.log
+*.tmp
+*.temp
+coverage/

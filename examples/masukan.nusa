@@ -1,0 +1,10 @@
+# Masukan interaktif sederhana dalam Nusa.
+
+tulis_tanpa_baris("Siapa nama Anda? ")
+var nama <- baca()
+
+jika panjang(nama) > 0 maka
+    tulis("Selamat datang, " + nama + ".")
+selain
+    tulis("Nama tidak boleh kosong.")
+akhir_jika

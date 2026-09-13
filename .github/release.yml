@@ -1,0 +1,26 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+    authors:
+      - dependabot
+  categories:
+    - title: Perubahan tidak kompatibel
+      labels:
+        - breaking-change
+    - title: Fitur
+      labels:
+        - enhancement
+        - feature
+    - title: Perbaikan
+      labels:
+        - bug
+        - fix
+    - title: Dokumentasi dan tooling
+      labels:
+        - documentation
+        - tooling
+        - ci
+    - title: Perubahan lainnya
+      labels:
+        - "*"

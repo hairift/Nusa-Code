@@ -1,0 +1,4 @@
+# Program pertama yang dapat dijalankan dengan interpreter Nusa.
+
+var nama <- "Nusa"
+tulis("Halo, " + nama + "!")
